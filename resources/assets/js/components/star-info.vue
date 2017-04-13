@@ -72,13 +72,13 @@ export default {
       return this.tags.map((tag) => {
         var isSelected = false
         if (this.currentStar.tags.length) {
-          isSelected = this.currentStar.tags.map(function (starTag) {
+          isSelected = this.currentStar.tags.map((starTag) => {
             return starTag.id
           }).indexOf(tag.id) > -1
         }
         return {
           id: tag.id,
-          text: tag.name,
+          name: tag.name,
           selected: isSelected
         }
       })
